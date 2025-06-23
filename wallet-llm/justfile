@@ -1,0 +1,20 @@
+# OISY Frontend Commands
+
+# Install dependencies
+install:
+    cd oisy_frontend && npm install
+
+# Run development server
+dev: build
+    cd oisy_frontend && npm run dev
+
+# Build for production
+build: install
+    cd oisy_frontend && npm run build
+
+# Clean node_modules and reinstall
+clean:
+    cd oisy_frontend && rm -rf node_modules && npm install
+
+# Start the frontend (alias for dev)
+start: dev 

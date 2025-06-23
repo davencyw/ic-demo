@@ -1,0 +1,25 @@
+{
+  "name": "oisy_frontend",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "format": "prettier --write \"src/**/*.{json,js,jsx,ts,tsx,css,scss}\""
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "sass": "^1.69.5",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.8",
+    "prettier": "^3.1.1"
+  },
+  "dependencies": {
+    "@dfinity/agent": "^2.4.1",
+    "@dfinity/llm": "^1.1.1",
+    "@dfinity/candid": "^2.4.1",
+    "@dfinity/principal": "^2.4.1"
+  }
+} 

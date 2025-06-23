@@ -1,0 +1,22 @@
+{
+  "hash": "29e9b012",
+  "configHash": "b19d8f70",
+  "lockfileHash": "ac9266ec",
+  "browserHash": "38b44be9",
+  "optimized": {
+    "@dfinity/agent": {
+      "src": "../../node_modules/@dfinity/agent/lib/esm/index.js",
+      "file": "@dfinity_agent.js",
+      "fileHash": "02371c30",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "canisterStatus-R2DEOBKU": {
+      "file": "canisterStatus-R2DEOBKU.js"
+    },
+    "chunk-X4QDNIJT": {
+      "file": "chunk-X4QDNIJT.js"
+    }
+  }
+}
