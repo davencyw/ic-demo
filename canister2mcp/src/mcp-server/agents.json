@@ -1,0 +1,7 @@
+{
+  "adder_agent": {
+    "name": "Adder Agent",
+    "candid_file": "src/agents/adder/src/service.did",
+    "principal": "zzxla-byaaa-aaaai-ajr5a-cai"
+  }
+}

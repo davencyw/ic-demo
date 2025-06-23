@@ -1,0 +1,6 @@
+service adder_agent: {
+    get_value: () -> (int64) query;
+    increment: () -> ();
+    decrement: () -> ();
+    say_hi: (name: text) -> (text) query;
+}

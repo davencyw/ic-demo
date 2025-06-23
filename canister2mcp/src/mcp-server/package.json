@@ -1,0 +1,26 @@
+{
+  "name": "ic-agentic-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for IC agentic interface",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "generate-tools": "node generateTools.js"
+  },
+  "dependencies": {
+    "@dfinity/agent": "^2.4.1",
+    "@dfinity/candid": "^2.4.1",
+    "@dfinity/principal": "^2.4.1",
+    "@modelcontextprotocol/sdk": "latest",
+    "zod": "^3.23.0",
+    "zod-to-json-schema": "^3.24.5"
+  },
+  "keywords": [
+    "mcp",
+    "server",
+    "internet-computer",
+    "agent"
+  ],
+  "author": "",
+  "license": "MIT"
+}
