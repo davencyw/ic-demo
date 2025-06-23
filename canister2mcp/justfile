@@ -1,0 +1,61 @@
+# IC Agentic MCP Template - Development Commands
+
+# Default recipe to list available commands
+default:
+    @just --list
+
+# ================================
+# IC Canister Development Commands
+# ================================
+
+# Clean build artifacts
+clean-canisters:
+    cargo clean
+    rm -rf .dfx
+
+# Build all agents
+build:
+    cargo build --target wasm32-unknown-unknown --release
+
+# Deploy locally
+deploy: build
+    dfx deploy --network local
+
+
+# Start dfx
+start-dfx:
+    dfx start --background --clean
+
+# Stop dfx
+stop-dfx:
+    dfx stop
+
+# =============================
+# MCP Server Development Commands  
+# =============================
+
+# Regenerate MCP agent tools from agents.json and candid files
+regen-mcp:
+    #!/usr/bin/env bash
+    echo "Regenerating MCP agent tools..."
+    cd src/mcp-server
+    npm run generate-tools
+
+# Install all dependencies
+install:
+    #!/usr/bin/env bash
+    echo "Installing MCP server dependencies..."
+    cd src/mcp-server
+    npm install
+
+# Clean and regenerate everything (MCP only)
+clean-mcp: install regen-mcp
+    echo "MCP clean build completed!"
+
+# =============================
+# General Commands
+# =============================
+
+# Clean everything (canisters + MCP)
+clean: clean-canisters clean-mcp
+    echo "Full clean build completed!"
